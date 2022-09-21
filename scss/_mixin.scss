@@ -25,3 +25,122 @@
         color: #33323D;
     }
 }
+@mixin footer {
+    footer {
+        background-color: $main-color3;
+    }
+    
+    .footer {
+        @include flex;
+        padding: 24px 0;
+    }
+    
+    .footer__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        margin: 0;
+    }
+    
+    .footer__logo-list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 0;
+    }
+    
+    .footer__nav-item {
+        a {
+            font-family: 'Public Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+    .svg{
+        fill: #FFFFFF;
+        transition: all .3s ease;
+    }
+    .svg:hover{
+        fill: aqua;
+    }
+    @media only screen and (max-width:637px){
+        .footer{
+            flex-direction: column;
+        }
+        .footer__nav-list{
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+@mixin header {
+    // header start 
+.nav {
+    @include flex;
+    padding-top: 64px;
+    padding-bottom: 54px;
+}
+
+.nav__bar {
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        padding: 0;
+    }
+
+    &-item {
+        .active {
+            color: #5FB4A2;
+            // color: $main-color1;
+        }
+
+        a {
+
+            font-family: 'Public Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #33323D;
+            transition: all .2s ease;
+            svg{
+                fill: white !important;
+            }
+            &:hover {
+                color: $main-color1;
+            }
+            &:active{
+                color: $main-color2;
+            }
+        }
+    }
+}
+
+.active {
+    // color: #5FB4A2;
+    color: $main-color1;
+}
+.nav__bar-bar{
+    display: none;
+}
+@media only screen and (max-width:555px){
+    .nav{
+        padding-top: 32px;
+    }
+    .nav__bar-bar{
+        display: block;
+    }
+    .nav__bar{
+        display: none;
+    }
+}
+}

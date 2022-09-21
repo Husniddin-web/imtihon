@@ -425,130 +425,18 @@ ul, li {
     display: none;
   }
 }
-.hero {
-  height: 600px;
-  width: 100%;
-  background-image: url(../../images/hero-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 116px;
-}
-
-.hero__title {
+.hero__item {
   display: flex;
-  flex-direction: column;
-  width: 445px;
-  height: 357px;
-  position: relative;
-  top: 243px;
-  background: #F2F2F2;
-}
-.hero__title h1 {
-  padding: 55px 56px 53px 0;
-  margin: 0;
-  font-family: "Ibarra Real Nova";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: -0.446429px;
-  color: #33323D;
-}
-
-.btn {
-  background: #203A4C;
-  width: 200px;
-  gap: 10px;
-  padding: 15px;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background: #5FB4A2;
-}
-.btn:active {
-  background-color: #33323D;
-  opacity: 0.3;
-}
-.btn a {
-  font-family: "Public Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-left: 20px;
-}
-.btn .arrow2 {
-  display: none;
-}
-
-.btn:hover .arrow1 {
-  display: none;
-}
-
-.btn:hover .arrow2 {
-  display: inline-block;
-}
-
-.hero__img {
-  display: none;
-}
-
-@media only screen and (max-width: 871px) {
-  .hero {
-    width: 100%;
-    background-image: url(../../images/hero-tablet-bg.png);
-    background-size: cover;
-  }
-  .hero__title {
-    width: 70%;
-    top: 322px;
-  }
-  .hero__title h1 {
-    font-size: 40px;
-    line-height: 42px;
-    padding-top: 48px;
-    padding-right: 90px;
-  }
-}
-@media only screen and (max-width: 632px) {
-  .hero {
-    background-image: none;
-  }
-  .hero__img {
-    display: block;
-  }
-  .hero__img img {
-    width: 100%;
-  }
-  .hero__title {
-    top: 0;
-    width: 80%;
-  }
-  .hero__title h1 {
-    padding: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-.info {
-  display: flex;
-  gap: 125px;
   align-items: center;
+  gap: 125px;
 }
 
-.info__img {
-  width: 50%;
+.hero__text {
+  width: 30%;
+  height: 50%;
 }
-
-.info__text {
-  width: 35%;
-}
-.info__text-title {
+.hero__text h2,
+.hero__text h1 {
   font-family: "Ibarra Real Nova";
   font-style: normal;
   font-weight: 700;
@@ -556,19 +444,17 @@ ul, li {
   line-height: 42px;
   letter-spacing: -0.357143px;
   color: #33323D;
-  margin-top: 0;
 }
-.info__text-text {
-  padding-bottom: 44px;
-  margin: 0;
+.hero__text p {
   font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   color: #33323D;
+  margin-bottom: 30px;
 }
-.info__text-btn {
+.hero__text a {
   font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
@@ -580,88 +466,81 @@ ul, li {
   border: 1px solid #33323D;
   padding: 17px 32px;
   transition: all 0.3s ease;
+  margin-bottom: 50px;
 }
-.info__text-btn:hover {
+.hero__text a:hover {
   background: #33323D;
   color: beige;
 }
-.info__text-btn:active {
+.hero__text a:active {
   border: 1px solid rgba(163, 163, 164, 0.8196078431);
   background-color: transparent;
   color: #33323D;
 }
-.info__text .hr1 {
-  position: relative;
-  top: -60px;
+.hero__text .hero__line1 {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
   background: #33323D;
   mix-blend-mode: normal;
   opacity: 0.15;
-  height: 1px;
+  margin-bottom: 70px;
 }
-.info__text .hr2 {
-  position: relative;
-  bottom: -60px;
+.hero__text .hero__line2 {
+  display: block;
+  width: 100%;
+  height: 2px;
   background: #33323D;
   mix-blend-mode: normal;
   opacity: 0.15;
-  height: 1px;
+  margin-top: 70px;
 }
 
-@media only screen and (max-width: 950px) {
-  .hr1 {
-    position: relative !important;
-    top: -20px !important;
-  }
-  h2 {
-    position: relative !important;
-    bottom: -20px !important;
-  }
+.manage {
+  margin-bottom: 80px;
 }
+
+.bookmark {
+  margin-bottom: 80px;
+  justify-content: end;
+}
+
+.insure {
+  margin-bottom: 80px;
+}
+
+.fylo {
+  margin-bottom: 150px;
+  justify-content: end;
+}
+
 @media only screen and (max-width: 900px) {
-  .info {
-    gap: 69px;
-    position: relative;
+  .hero__item {
+    gap: 60px;
   }
-  .info__text {
-    width: 100%;
+  .hero__text {
+    width: 40%;
   }
-  .info__text h2 {
-    padding-bottom: 30px;
-  }
-  .hr1 {
-    position: relative !important;
-    top: -50px !important;
-  }
-  .hr2 {
-    position: relative !important;
-    bottom: -65px !important;
+  .hero__line1 {
+    width: 70%;
   }
 }
-@media only screen and (max-width: 702px) {
-  .info {
+@media only screen and (max-width: 635px) {
+  .hero__item {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
   }
-  .info__img {
-    margin-top: 50px;
-    width: 311px;
+  .hero__text {
+    width: 85%;
   }
-  .info__img img {
-    width: 100%;
+  .bookmark {
+    flex-direction: column-reverse;
   }
-  .info__text {
-    width: 90%;
-  }
-  .info__text .hr1 {
-    position: relative !important;
-    top: -10px !important;
+  .fylo {
+    flex-direction: column-reverse;
   }
 }
 .contact {
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -677,6 +556,7 @@ ul, li {
   line-height: 42px;
   letter-spacing: -0.357143px;
   color: #33323D;
+  margin-top: 0;
 }
 .contact span {
   display: inline-block;
@@ -783,4 +663,4 @@ footer {
     gap: 30px;
     margin-bottom: 30px;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=portfolio.css.map */
