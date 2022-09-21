@@ -1,0 +1,52 @@
+.contact {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+
+    h3 {
+        width: 30%;
+        font-family: 'Ibarra Real Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 42px;
+        letter-spacing: -0.357143px;
+        color: #33323D;
+    }
+    span{
+        display: inline-block;
+        width: 50%;
+        height: 1px;
+        background: #33323D;
+        mix-blend-mode: normal;
+        opacity: 0.15;
+    }
+    a{
+        @include button ;
+    }
+    
+}
+@media only screen and (max-width:893px){
+    .contact{
+        span{
+            width: 20%;
+        }
+        h3{
+            width: 40%;
+        }
+    }
+}
+@media only screen and (max-width:568px){
+    .contact{
+        flex-direction: column;
+        text-align: center;
+        span{
+            display: none;
+        }
+        h3{
+            width: 90%;
+        }
+    }
+}

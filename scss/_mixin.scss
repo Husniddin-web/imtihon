@@ -1,0 +1,27 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin button {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #33323D;
+    border: 1px solid #33323D;
+    padding: 17px 32px;
+    transition: all .3s ease;
+    &:hover{
+        background: #33323D;
+        color: beige;
+    }
+    &:active{
+        border: 1px solid #a3a3a4d1;
+        background-color: transparent;
+        color: #33323D;
+    }
+}

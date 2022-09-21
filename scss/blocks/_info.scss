@@ -1,0 +1,112 @@
+.info {
+    display: flex;
+    gap: 125px;
+    align-items: center;
+}
+
+.info__img {
+    width: 50%;
+}
+
+.info__text {
+    width: 35%;
+
+    &-title {
+        font-family: 'Ibarra Real Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 42px;
+        letter-spacing: -0.357143px;
+        color: #33323D;
+        margin-top: 0;
+    }
+
+    &-text {
+        padding-bottom: 44px;
+        margin: 0;
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #33323D;
+    }
+
+    &-btn {
+        @include button;
+    }
+
+    .hr1 {
+        position: relative;
+        top: -60px;
+        background: #33323D;
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        height: 1px;
+    }
+
+    .hr2 {
+        position: relative;
+        bottom: -60px;
+        background: #33323D;
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        height: 1px;
+    }
+}
+
+
+@media only screen and (max-width:950px) {
+    .hr1 {
+        position: relative !important;
+        top: -20px !important;
+    }
+    h2{
+        position: relative !important;
+        bottom: -20px !important;
+    }
+}
+@media only screen and (max-width:900px){
+    .info{
+        gap: 69px;
+        position: relative;
+    }
+    .info__text{
+        width: 100%;
+        h2{
+            padding-bottom: 30px;
+        }
+    }
+    .hr1 {
+        position: relative !important ;
+        top: -50px  !important;
+    }
+    .hr2{
+        position: relative !important;
+        bottom: -65px !important;
+    }
+}
+@media only screen and (max-width:702px){
+    .info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // padding-top: 40px;
+        gap: 30px;
+    }
+    .info__img{
+        margin-top: 50px;
+        width: 311px;
+        img{
+            width: 100%;
+        }
+    }
+    .info__text{
+        width: 90%;
+        .hr1 {
+            position: relative !important ;
+            top: -10px  !important;
+        }
+    }
+}
